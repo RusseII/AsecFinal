@@ -1,0 +1,6 @@
+framework module Pods_AsecFinalTests {
+  umbrella header "Pods-AsecFinalTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
