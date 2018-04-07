@@ -73,11 +73,11 @@ class ARController: UIViewController {
         
         
         
-//
-//        let response =  Alamofire.request("http://104.196.195.245/coords?start=start&end=\(number)").responseJSON()
-//        var jsonData = JSON(response.result.value!)
-//        var jsonArray = jsonData["data"].array
-//
+
+        let response =  Alamofire.request("http://104.196.195.245/coords?start=start&end=\(number)").responseJSON()
+        var jsonData = JSON(response.result.value!)
+        var jsonArray = jsonData["data"].array
+
 //
 //
 //
@@ -87,9 +87,9 @@ class ARController: UIViewController {
         
         
         //        comment this ack in for request
-//        var coords = jsonArray!
+        var coords = jsonArray!
         
-      var coords: JSON = [["x": 50, "y": 20, "z": 9.9568], ["x": 50, "y": 20, "z": 0], ["x": 53.7084, "y": (20 ), "z": 0], ["x": 53.7084, "y": (20 ), "z": -5.9182], ["x": 73.5204, "y": (20 ), "z": -5.9182] ]
+//      var coords: JSON = [["x": 50, "y": 20, "z": 9.9568], ["x": 50, "y": 20, "z": 0], ["x": 53.7084, "y": (20 ), "z": 0], ["x": 53.7084, "y": (20 ), "z": -5.9182], ["x": 73.5204, "y": (20 ), "z": -5.9182] ]
         
         
         
@@ -143,7 +143,7 @@ class ARController: UIViewController {
                     zdistance = (zdistance * -1)
                     cos1 = Float(0.1)
                     cos2 = Float(0.1)
-                    newdz = (zdistance/2)
+                    newdz = -(zdistance/2)
                     cc.z += newdz
 
                 }
@@ -164,8 +164,8 @@ class ARController: UIViewController {
                 else if zdistance > 0 {
                     cos1 = Float(0.1)
                     cos2 = Float(0.1)
-                    newdz = -(zdistance/2)
-                    cc.z += newdz
+                    newdz = (zdistance/2)
+                    cc.z -= newdz
                 }
                 
             
