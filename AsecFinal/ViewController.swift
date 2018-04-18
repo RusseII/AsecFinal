@@ -13,9 +13,11 @@ import SwiftSpinner
 import SwiftyJSON
 import Alamofire
 import Alamofire_Synchronous
+import CoreLocation
 
 
-class ARController: UIViewController {
+
+class ARController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -23,8 +25,46 @@ class ARController: UIViewController {
         super.viewDidLoad()
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = ARWorldTrackingConfiguration.PlaneDetection.horizontal
+        configuration.worldAlignment = .gravityAndHeading
+
         sceneView.session.run(configuration)
+        
+//        var poo = CLHeading()
+//        poo.trueHeading.n
+//        print(poo.x, poo.y, poo.z, "CLHEADING")
+
+        
     }
+    
+    var locationCallback: ((CLLocation) -> ())? = nil
+    var headingCallback: ((CLLocationDirection) -> ())? = nil
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("ni")
+        guard let currentLocation = locations.last else { return }
+        locationCallback?(currentLocation)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        print("ni")
+
+        headingCallback?(newHeading.trueHeading)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("ni")
+
+        print("⚠️ Error while updating location " + error.localizedDescription)
+    }
+    
+    
+    let locationManager: CLLocationManager = {
+        
+        $0.requestWhenInUseAuthorization()
+        $0.startUpdatingHeading()
+        return $0
+    }(CLLocationManager())
+    
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -66,32 +106,35 @@ class ARController: UIViewController {
    
     @IBAction func mybuttom(_ sender: Any) {
     }
+    
+    
+   
+    
+    
+ 
 
+    
+//    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+//    }
     
     func createPathObjects(number: String ) {
    
         
-        
-        
-
-        let response =  Alamofire.request("http://104.196.195.245/coords?start=start&end=\(number)").responseJSON()
-        var jsonData = JSON(response.result.value!)
-        var jsonArray = jsonData["data"].array
-
 //
 //
+//        let response =  Alamofire.request("http://35.185.12.212/coords?username=emerson&start=main_door_0&end=\(number)").responseJSON()
 //
+//        var jsonData = JSON(response.result.value!)
+//        var jsonArray = jsonData["data"].array
+//        var coords = jsonArray!
 //
+//      var coords: JSON = [["x": 50, "y": 20, "z": 9.9568], ["x": 50, "y": 20, "z": 0], ["x": 53.7084, "y": (20 ), "z": 0], ["x": 53.7084, "y": (20 ), "z": -5.9182], ["x": 73.5204, "y": 20, "z": -5.9182] ]
 //
-       
         
-        
-        //        comment this ack in for request
-        var coords = jsonArray!
-        
-//      var coords: JSON = [["x": 50, "y": 20, "z": 9.9568], ["x": 50, "y": 20, "z": 0], ["x": 53.7084, "y": (20 ), "z": 0], ["x": 53.7084, "y": (20 ), "z": -5.9182], ["x": 73.5204, "y": (20 ), "z": -5.9182] ]
-        
-        
+//        var coords: JSON = [["x":0,"y":1,"z":0],["x":0,"y":1,"z":0],["x":0,"y":1,"z":-1.2565],["x":0,"y":1,"z":-2.9855],["x":-1.4308,"y":1,"z":-2.9855],["x":-2.4055,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-5.9959],["x":-11.9744,"y":1,"z":-5.9959],["x":-11.9744,"y":1,"z":-7.3408]]
+//
+         var coords: JSON = [["x":0,"y":1,"z":0],["x":0,"y":1,"z":0],["x":0,"y":1,"z":-1.2565],["x":0,"y":1,"z":-2.9855],["x":-1.4308,"y":1,"z":-2.9855],["x":-2.4055,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-5.9959]]
+//
         
        //3.7084000000000006
         //var x = [(55,20,15), (55,30,15), (55,30,15)]
@@ -104,18 +147,20 @@ class ARController: UIViewController {
         
         print(coords, "Hi guys is this an optionAL?")
         for (index, _) in coords.enumerated() {
-            print(index, "WOW!!")
+//            print(index, "WOW!!")
             if index != (coords.count) - 1 {
-                print("z")
+//                print("z")
             //make sure it doesn't crash on the final coordinate
-                print(coords)
-                print(coords[index])
-                print(coords[index + 1]["x"].float!)
-                            var xdistance = (coords[index]["x"].float! - coords[index + 1]["x"].float!)
+//                print(coords)
+//                print(coords[index])
+//                print(coords[index + 1]["x"].float!)
+                            var xdistance = (coords[index + 1]["x"].float! - coords[index]["x"].float!)
                             var ydistance = (coords[index]["y"].float! - coords[index + 1]["y"].float!)
                             var zdistance = (coords[index]["z"].float! - coords[index + 1]["z"].float!)
-                print(xdistance,ydistance, zdistance, "distances")
+//                print(xdistance,ydistance, zdistance, "distances")
                 
+                print(xdistance,ydistance, zdistance, "distances")
+
                 var cos1 = Float(0.0)
                 var cos2 = Float(0.0)
                 var cos3 = Float(0.0)
@@ -123,41 +168,53 @@ class ARController: UIViewController {
                 var newdx = Float(0.0)
                 var newdy = Float(0.0)
                 var newdz = Float(0.0)
+                var xdistanceRecorder = Float(0.0)
+                var zdistanceRecorder = Float(0.0)
+
 
 
                 if xdistance < 0 {
-                    xdistance = (xdistance * -1)
                     cos2 = Float(0.1)
                     cos3 = Float(0.1)
                     newdx = (xdistance/2)
                     cc.x += newdx
+                    xdistanceRecorder = xdistance
+                                        xdistance = (xdistance * -1)
+
                 }
                 else if ydistance < 0 {
-                    ydistance = (ydistance * -1)
                     cos1 = Float(0.1)
                     cos3 = Float(0.1)
                     newdy = (ydistance/2)
                     cc.y += newdy
+                                        ydistance = (ydistance * -1)
+
                 }
                 else if zdistance < 0 {
-                    zdistance = (zdistance * -1)
+//                    zdistance = (zdistance * -1)
                     cos1 = Float(0.1)
                     cos2 = Float(0.1)
-                    newdz = -(zdistance/2)
-                    cc.z += newdz
+                    newdz = (zdistance/2)
+                    cc.z -= newdz
+                    zdistanceRecorder = zdistance
+
+                                        zdistance = (zdistance * -1)
+
 
                 }
                 
                 else if xdistance > 0 {
                     cos2 = Float(0.1)
                     cos3 = Float(0.1)
-                    newdx = -(xdistance/2)
+                    newdx = (xdistance/2)
                     cc.x += newdx
+                    xdistanceRecorder = xdistance
+
                 }
                 else if ydistance > 0 {
                     cos1 = Float(0.1)
                     cos3 = Float(0.1)
-                    newdy = -(ydistance/2)
+                    newdy = (ydistance/2)
                     cc.y += newdy
 
                 }
@@ -166,25 +223,38 @@ class ARController: UIViewController {
                     cos2 = Float(0.1)
                     newdz = (zdistance/2)
                     cc.z -= newdz
+                    zdistanceRecorder = zdistance
+
                 }
                 
+                  print( cc.x , cc.y - 1  ,  cc.z, xdistance,ydistance, zdistance, "distances2")
+                //neg distance is right
+                //pos is forward
+                //left is positive
             
                 
 //                cc.x = cc.x + (xdistance/2) //plus for right minus for left add a check to see
-                print(xdistance, ydistance, zdistance)
+//                print(xdistance, ydistance, zdistance)
                 //comment next to lines back in
 //                cc.y =  cc.y - (ydistance/2)
 //                cc.z =  cc.z - (zdistance/2) + 0.2
             
-            var cubeNode = SCNNode(geometry: SCNBox(width: CGFloat((xdistance + cos1)), height: CGFloat((ydistance) + cos2), length: CGFloat((zdistance) + cos3) , chamferRadius:0))
-                        cubeNode.position = SCNVector3( cc.x , cc.y - 1  ,  cc.z)
-                print("testing", xdistance + cos1)
-                //makes it colored
-//
-                cc.x += xdistance/2
-//                cc.y -= ydistance/2
                 
-                cc.z -= zdistance/2
+                
+            var cubeNode = SCNNode(geometry: SCNBox(width: CGFloat((xdistance + cos1)), height: CGFloat((ydistance) + cos2), length: CGFloat((zdistance) + cos3) , chamferRadius:0))
+            
+                print("transform", cubeNode.worldTransform)
+//                print("testing", xdistance + cos1)
+                //makes it colored
+                                        cubeNode.position = SCNVector3( cc.x , cc.y - 1  ,  cc.z)
+//cubeNode.rotation = SCNVector4(0,1,0, 90)
+                
+                
+                //this effect next line, not the current one
+                cc.x += xdistanceRecorder/2
+//                cc.y -= ydistance/2
+                cc.z -= zdistanceRecorder/2
+
             
                 if xdistance > 0{
                      cubeNode.geometry?.firstMaterial?.diffuse.contents  = UIColor.red
@@ -199,7 +269,7 @@ class ARController: UIViewController {
 //                    cc.z += 0.2
                 }
                 //z is forward back, y up down x is left right
-               
+                
            sceneView.scene.rootNode.addChildNode(cubeNode)
             
             //currentStartLocation keeps track of where initial position should be set
