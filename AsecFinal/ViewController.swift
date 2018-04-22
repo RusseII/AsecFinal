@@ -25,7 +25,7 @@ class ARController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = ARWorldTrackingConfiguration.PlaneDetection.horizontal
-        configuration.worldAlignment = .gravityAndHeading
+//        configuration.worldAlignment = .gravityAndHeading
 
         sceneView.session.run(configuration)
         
@@ -122,18 +122,18 @@ class ARController: UIViewController, CLLocationManagerDelegate {
         
 //
 //
-//        let response =  Alamofire.request("http://35.185.12.212/coords?username=emerson&start=main_door_0&end=\(number)").responseJSON()
-//
-//        var jsonData = JSON(response.result.value!)
-//        var jsonArray = jsonData["data"].array
-//        var coords = jsonArray!
-//
+        let response =  Alamofire.request("http://35.185.12.212/coords?username=emerson&start=main_door_0&end=\(number)").responseJSON()
+
+        var jsonData = JSON(response.result.value!)
+        var jsonArray = jsonData["data"].array
+        var coords = jsonArray!
+
 //      var coords: JSON = [["x": 50, "y": 20, "z": 9.9568], ["x": 50, "y": 20, "z": 0], ["x": 53.7084, "y": (20 ), "z": 0], ["x": 53.7084, "y": (20 ), "z": -5.9182], ["x": 73.5204, "y": 20, "z": -5.9182] ]
 //
         
 //        var coords: JSON = [["x":0,"y":1,"z":0],["x":0,"y":1,"z":0],["x":0,"y":1,"z":-1.2565],["x":0,"y":1,"z":-2.9855],["x":-1.4308,"y":1,"z":-2.9855],["x":-2.4055,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-5.9959],["x":-11.9744,"y":1,"z":-5.9959],["x":-11.9744,"y":1,"z":-7.3408]]
 //
-         var coords: JSON = [["x":0,"y":1,"z":0],["x":0,"y":1,"z":0],["x":0,"y":1,"z":-1.2565],["x":0,"y":1,"z":-2.9855],["x":-1.4308,"y":1,"z":-2.9855],["x":-2.4055,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-5.9959]]
+//         var coords: JSON = [["x":0,"y":1,"z":0],["x":0,"y":1,"z":0],["x":0,"y":1,"z":-1.2565],["x":0,"y":1,"z":-2.9855],["x":-1.4308,"y":1,"z":-2.9855],["x":-2.4055,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-2.9855],["x":-8.1498,"y":1,"z":-5.9959]]
 //
         
        //3.7084000000000006
@@ -155,7 +155,8 @@ class ARController: UIViewController, CLLocationManagerDelegate {
 //                print(coords[index])
 //                print(coords[index + 1]["x"].float!)
                             var xdistance = (coords[index + 1]["x"].float! - coords[index]["x"].float!)
-                            var ydistance = (coords[index]["y"].float! - coords[index + 1]["y"].float!)
+//                            var ydistance = (coords[index]["y"].float! - coords[index + 1]["y"].float!)
+                var ydistance = Float(0.0)
                             var zdistance = (coords[index]["z"].float! - coords[index + 1]["z"].float!)
 //                print(xdistance,ydistance, zdistance, "distances")
                 
@@ -246,7 +247,8 @@ class ARController: UIViewController, CLLocationManagerDelegate {
                 print("transform", cubeNode.worldTransform)
 //                print("testing", xdistance + cos1)
                 //makes it colored
-                                        cubeNode.position = SCNVector3( cc.x , cc.y - 1  ,  cc.z)
+                                        cubeNode.position = SCNVector3( cc.x , cc.y - 2
+                                            ,  cc.z)
 //cubeNode.rotation = SCNVector4(0,1,0, 90)
                 
                 
