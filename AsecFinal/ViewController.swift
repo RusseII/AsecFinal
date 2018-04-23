@@ -19,6 +19,9 @@ import CoreLocation
 
 class ARController: UIViewController, CLLocationManagerDelegate {
     
+    var startValue: String?
+    var endValue: String?
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -68,32 +71,41 @@ class ARController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let alert = UIAlertController(title: "Room Number", message: "Enter the room number of the room that you want to go to", preferredStyle: .alert)
+        SwiftSpinner.show("Creating Paths...")
         
-        //2. Add the text field. You can configure it however you need.
-        alert.addTextField { (textField) in
-            textField.text = ""
-            textField.keyboardType = .numberPad
-            textField.textAlignment = .center
-            //textField.cent
-        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
+            // Put your code which should be executed with a delay here
+            self.createPathObjects()
+            SwiftSpinner.hide()
+        })
+            
         
-        // 3. Grab the value from the text field, and print it when the user clicks OK.
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
-            print("Text field: \(textField?.text)")
-              SwiftSpinner.show("Creating Paths...")
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
-                // Put your code which should be executed with a delay here
-                self.createPathObjects(number: (textField?.text!)!)
-                SwiftSpinner.hide()
-                
-            })
-        }))
+//        let alert = UIAlertController(title: "Room Number", message: "Enter the room number of the room that you want to go to", preferredStyle: .alert)
+//
+//        //2. Add the text field. You can configure it however you need.
+//        alert.addTextField { (textField) in
+//            textField.text = ""
+//            textField.keyboardType = .numberPad
+//            textField.textAlignment = .center
+//            //textField.cent
+//        }
+//
+//        // 3. Grab the value from the text field, and print it when the user clicks OK.
+//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+//            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+//            print("Text field: \(textField?.text)")
+//              SwiftSpinner.show("Creating Paths...")
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
+//                // Put your code which should be executed with a delay here
+//                self.createPathObjects(number: (textField?.text!)!)
+//                SwiftSpinner.hide()
+//
+//            })
+//        }))
         
         // 4. Present the alert.
-        self.present(alert, animated: true, completion: nil)
+//        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func emersonButton(_ sender: Any) {
@@ -117,12 +129,11 @@ class ARController: UIViewController, CLLocationManagerDelegate {
 //    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
 //    }
     
-    func createPathObjects(number: String ) {
-   
+    func createPathObjects() {
+        print("End Value: \(startValue!)")
+        print("Start Value: \(startValue!)")
         
-//
-//
-        let response =  Alamofire.request("http://35.185.12.212/coords?username=emerson&start=main_door_0&end=\(number)").responseJSON()
+        let response =  Alamofire.request("http://35.185.12.212/coords?username=emerson&start=\(startValue!)&end=\(endValue!)").responseJSON()
 
         var jsonData = JSON(response.result.value!)
         var jsonArray = jsonData["data"].array

@@ -17,6 +17,11 @@
 		46F9237D1FB9EB6000F4F618 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F9237B1FB9EB6000F4F618 /* LaunchScreen.storyboard */; };
 		46F923881FB9EB6000F4F618 /* AsecFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F923871FB9EB6000F4F618 /* AsecFinalTests.swift */; };
 		46F923931FB9EB6000F4F618 /* AsecFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F923921FB9EB6000F4F618 /* AsecFinalUITests.swift */; };
+		C03AE6C0208D55E000656248 /* EmersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03AE6BF208D55E000656248 /* EmersonsViewController.swift */; };
+		C0D0CD3D208D1BC100AC3036 /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0D0CD3C208D1BC000AC3036 /* Cabin-Regular.ttf */; };
+		C0D0CD3F208D1C2500AC3036 /* Cabin in Resources */ = {isa = PBXBuildFile; fileRef = C0D0CD3E208D1C2400AC3036 /* Cabin */; };
+		C0D0CD41208D3DEA00AC3036 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D0CD40208D3DEA00AC3036 /* HomeViewController.swift */; };
+		C0FDE62B208D67E500ACAE75 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FDE62A208D67E400ACAE75 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +46,7 @@
 		104F5CD40944691943CB2193 /* Pods-AsecFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsecFinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsecFinal/Pods-AsecFinal.release.xcconfig"; sourceTree = "<group>"; };
 		1D83D8B099D6AF3A46D37544 /* Pods_AsecFinalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AsecFinalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		284F9FED6B4F66E7D4A3C1D8 /* Pods-AsecFinalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsecFinalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsecFinalTests/Pods-AsecFinalTests.release.xcconfig"; sourceTree = "<group>"; };
-		46F159862034A21C0018DCD9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Images.xcassets; sourceTree = "<group>"; };
+		46F159862034A21C0018DCD9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AsecFinal/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		46F9236F1FB9EB6000F4F618 /* AsecFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsecFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F923721FB9EB6000F4F618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46F923741FB9EB6000F4F618 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,11 @@
 		46F923941FB9EB6000F4F618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		973F1D7DDA17371A580B436C /* Pods-AsecFinalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsecFinalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsecFinalUITests/Pods-AsecFinalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B19ECE8F372ED2098D503C74 /* Pods_AsecFinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AsecFinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03AE6BF208D55E000656248 /* EmersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmersonsViewController.swift; sourceTree = "<group>"; };
+		C0D0CD3C208D1BC000AC3036 /* Cabin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-Regular.ttf"; path = "../../../Downloads/Cabin/Cabin-Regular.ttf"; sourceTree = "<group>"; };
+		C0D0CD3E208D1C2400AC3036 /* Cabin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Cabin; path = ../../../Downloads/Cabin; sourceTree = "<group>"; };
+		C0D0CD40208D3DEA00AC3036 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "AsecFinal/View Controllers/HomeViewController.swift"; sourceTree = SOURCE_ROOT; };
+		C0FDE62A208D67E400ACAE75 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D4DF406CEB30343F616BF027 /* Pods-AsecFinalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsecFinalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsecFinalUITests/Pods-AsecFinalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA5A343A277AA416C07AF85B /* Pods-AsecFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsecFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsecFinal/Pods-AsecFinal.debug.xcconfig"; sourceTree = "<group>"; };
 		DDBC21B1474246960C9C3702 /* Pods_AsecFinalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AsecFinalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,12 +124,17 @@
 		46F923711FB9EB6000F4F618 /* AsecFinal */ = {
 			isa = PBXGroup;
 			children = (
+				C0D0CD42208D4A4500AC3036 /* View Controllers */,
 				46F923721FB9EB6000F4F618 /* AppDelegate.swift */,
 				46F923741FB9EB6000F4F618 /* ViewController.swift */,
 				46F923761FB9EB6000F4F618 /* Main.storyboard */,
+				C03AE6BF208D55E000656248 /* EmersonsViewController.swift */,
 				46F9237B1FB9EB6000F4F618 /* LaunchScreen.storyboard */,
 				46F159862034A21C0018DCD9 /* Images.xcassets */,
+				C0D0CD3E208D1C2400AC3036 /* Cabin */,
+				C0D0CD3C208D1BC000AC3036 /* Cabin-Regular.ttf */,
 				46F9237E1FB9EB6000F4F618 /* Info.plist */,
+				C0FDE62A208D67E400ACAE75 /* SettingsViewController.swift */,
 			);
 			path = AsecFinal;
 			sourceTree = "<group>";
@@ -153,6 +168,14 @@
 				973F1D7DDA17371A580B436C /* Pods-AsecFinalUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0D0CD42208D4A4500AC3036 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0D0CD40208D3DEA00AC3036 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		F87A85DBE4306A465C083E06 /* Frameworks */ = {
@@ -281,7 +304,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D0CD3F208D1C2500AC3036 /* Cabin in Resources */,
 				46F159872034A21C0018DCD9 /* Images.xcassets in Resources */,
+				C0D0CD3D208D1BC100AC3036 /* Cabin-Regular.ttf in Resources */,
 				46F9237D1FB9EB6000F4F618 /* LaunchScreen.storyboard in Resources */,
 				46F923781FB9EB6000F4F618 /* Main.storyboard in Resources */,
 			);
@@ -466,6 +491,9 @@
 			files = (
 				46F923751FB9EB6000F4F618 /* ViewController.swift in Sources */,
 				46F923731FB9EB6000F4F618 /* AppDelegate.swift in Sources */,
+				C03AE6C0208D55E000656248 /* EmersonsViewController.swift in Sources */,
+				C0FDE62B208D67E500ACAE75 /* SettingsViewController.swift in Sources */,
+				C0D0CD41208D3DEA00AC3036 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,7 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iOS AppIcon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U55TAW8AG8;
+				DEVELOPMENT_TEAM = 3888STB5WX;
 				INFOPLIST_FILE = AsecFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "https---deephire.io.AsecFinal";
@@ -649,7 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iOS AppIcon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U55TAW8AG8;
+				DEVELOPMENT_TEAM = 3888STB5WX;
 				INFOPLIST_FILE = AsecFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "https---deephire.io.AsecFinal";
