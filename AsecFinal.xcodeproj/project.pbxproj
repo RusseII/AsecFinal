@@ -22,6 +22,14 @@
 		C0D0CD3F208D1C2500AC3036 /* Cabin in Resources */ = {isa = PBXBuildFile; fileRef = C0D0CD3E208D1C2400AC3036 /* Cabin */; };
 		C0D0CD41208D3DEA00AC3036 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D0CD40208D3DEA00AC3036 /* HomeViewController.swift */; };
 		C0FDE62B208D67E500ACAE75 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FDE62A208D67E400ACAE75 /* SettingsViewController.swift */; };
+		C0FDE636208D9A9800ACAE75 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FDE62E208D9A9800ACAE75 /* Cabin-Italic.ttf */; };
+		C0FDE637208D9A9800ACAE75 /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FDE62F208D9A9800ACAE75 /* Cabin-Bold.ttf */; };
+		C0FDE638208D9A9800ACAE75 /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FDE630208D9A9800ACAE75 /* Cabin-Regular.ttf */; };
+		C0FDE639208D9A9800ACAE75 /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FDE631208D9A9800ACAE75 /* Cabin-BoldItalic.ttf */; };
+		C0FDE63A208D9A9800ACAE75 /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FDE632208D9A9800ACAE75 /* Cabin-SemiBold.ttf */; };
+		C0FDE63B208D9A9800ACAE75 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FDE633208D9A9800ACAE75 /* Cabin-Medium.ttf */; };
+		C0FDE63C208D9A9800ACAE75 /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FDE634208D9A9800ACAE75 /* Cabin-SemiBoldItalic.ttf */; };
+		C0FDE63D208D9A9800ACAE75 /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FDE635208D9A9800ACAE75 /* Cabin-MediumItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,14 @@
 		C0D0CD3E208D1C2400AC3036 /* Cabin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Cabin; path = ../../../Downloads/Cabin; sourceTree = "<group>"; };
 		C0D0CD40208D3DEA00AC3036 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "AsecFinal/View Controllers/HomeViewController.swift"; sourceTree = SOURCE_ROOT; };
 		C0FDE62A208D67E400ACAE75 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C0FDE62E208D9A9800ACAE75 /* Cabin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-Italic.ttf"; path = "../../../../Downloads/Cabin/Cabin-Italic.ttf"; sourceTree = "<group>"; };
+		C0FDE62F208D9A9800ACAE75 /* Cabin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-Bold.ttf"; path = "../../../../Downloads/Cabin/Cabin-Bold.ttf"; sourceTree = "<group>"; };
+		C0FDE630208D9A9800ACAE75 /* Cabin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-Regular.ttf"; path = "../../../../Downloads/Cabin/Cabin-Regular.ttf"; sourceTree = "<group>"; };
+		C0FDE631208D9A9800ACAE75 /* Cabin-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-BoldItalic.ttf"; path = "../../../../Downloads/Cabin/Cabin-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C0FDE632208D9A9800ACAE75 /* Cabin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-SemiBold.ttf"; path = "../../../../Downloads/Cabin/Cabin-SemiBold.ttf"; sourceTree = "<group>"; };
+		C0FDE633208D9A9800ACAE75 /* Cabin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-Medium.ttf"; path = "../../../../Downloads/Cabin/Cabin-Medium.ttf"; sourceTree = "<group>"; };
+		C0FDE634208D9A9800ACAE75 /* Cabin-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-SemiBoldItalic.ttf"; path = "../../../../Downloads/Cabin/Cabin-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C0FDE635208D9A9800ACAE75 /* Cabin-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Cabin-MediumItalic.ttf"; path = "../../../../Downloads/Cabin/Cabin-MediumItalic.ttf"; sourceTree = "<group>"; };
 		D4DF406CEB30343F616BF027 /* Pods-AsecFinalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsecFinalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsecFinalUITests/Pods-AsecFinalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA5A343A277AA416C07AF85B /* Pods-AsecFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsecFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AsecFinal/Pods-AsecFinal.debug.xcconfig"; sourceTree = "<group>"; };
 		DDBC21B1474246960C9C3702 /* Pods_AsecFinalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AsecFinalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +140,7 @@
 		46F923711FB9EB6000F4F618 /* AsecFinal */ = {
 			isa = PBXGroup;
 			children = (
+				C0FDE62D208D9A7400ACAE75 /* fonts */,
 				C0D0CD42208D4A4500AC3036 /* View Controllers */,
 				46F923721FB9EB6000F4F618 /* AppDelegate.swift */,
 				46F923741FB9EB6000F4F618 /* ViewController.swift */,
@@ -176,6 +193,21 @@
 				C0D0CD40208D3DEA00AC3036 /* HomeViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C0FDE62D208D9A7400ACAE75 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C0FDE62F208D9A9800ACAE75 /* Cabin-Bold.ttf */,
+				C0FDE631208D9A9800ACAE75 /* Cabin-BoldItalic.ttf */,
+				C0FDE62E208D9A9800ACAE75 /* Cabin-Italic.ttf */,
+				C0FDE633208D9A9800ACAE75 /* Cabin-Medium.ttf */,
+				C0FDE635208D9A9800ACAE75 /* Cabin-MediumItalic.ttf */,
+				C0FDE630208D9A9800ACAE75 /* Cabin-Regular.ttf */,
+				C0FDE632208D9A9800ACAE75 /* Cabin-SemiBold.ttf */,
+				C0FDE634208D9A9800ACAE75 /* Cabin-SemiBoldItalic.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		F87A85DBE4306A465C083E06 /* Frameworks */ = {
@@ -304,10 +336,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FDE63D208D9A9800ACAE75 /* Cabin-MediumItalic.ttf in Resources */,
 				C0D0CD3F208D1C2500AC3036 /* Cabin in Resources */,
+				C0FDE63A208D9A9800ACAE75 /* Cabin-SemiBold.ttf in Resources */,
+				C0FDE638208D9A9800ACAE75 /* Cabin-Regular.ttf in Resources */,
 				46F159872034A21C0018DCD9 /* Images.xcassets in Resources */,
+				C0FDE637208D9A9800ACAE75 /* Cabin-Bold.ttf in Resources */,
+				C0FDE63B208D9A9800ACAE75 /* Cabin-Medium.ttf in Resources */,
 				C0D0CD3D208D1BC100AC3036 /* Cabin-Regular.ttf in Resources */,
+				C0FDE63C208D9A9800ACAE75 /* Cabin-SemiBoldItalic.ttf in Resources */,
 				46F9237D1FB9EB6000F4F618 /* LaunchScreen.storyboard in Resources */,
+				C0FDE639208D9A9800ACAE75 /* Cabin-BoldItalic.ttf in Resources */,
+				C0FDE636208D9A9800ACAE75 /* Cabin-Italic.ttf in Resources */,
 				46F923781FB9EB6000F4F618 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

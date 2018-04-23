@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Cabin-Bold.ttf</string>
+		<string>Cabin-Regular.ttf</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>

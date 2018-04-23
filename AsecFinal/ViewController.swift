@@ -133,6 +133,9 @@ class ARController: UIViewController, CLLocationManagerDelegate {
         print("End Value: \(startValue!)")
         print("Start Value: \(startValue!)")
         
+        let wheelChairString = UserDefaults.standard.string(forKey: "switchState")
+        print("WheelChair Value: \(wheelChairString!)")
+        
         let response =  Alamofire.request("http://35.185.12.212/coords?username=emerson&start=\(startValue!)&end=\(endValue!)").responseJSON()
 
         var jsonData = JSON(response.result.value!)

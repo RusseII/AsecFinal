@@ -29,21 +29,15 @@
                                     <constraint firstAttribute="height" constant="745" id="p9X-fC-x3o"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Go Go ASEC" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGn-3s-zKZ">
-                                <rect key="frame" x="168" y="173" width="559" height="65"/>
-                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="60"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtZ-zM-F83">
-                                <rect key="frame" x="95" y="64" width="313" height="296"/>
-                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtZ-zM-F83">
+                                <rect key="frame" x="95" y="44" width="313" height="296"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="200"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.19575264084507044" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yw-cW-tlc">
-                                <rect key="frame" x="372" y="917" width="90" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yw-cW-tlc">
+                                <rect key="frame" x="372" y="925" width="90" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
@@ -51,22 +45,21 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FpT-RD-L82">
-                                <rect key="frame" x="266" y="695" width="97" height="30"/>
+                                <rect key="frame" x="270" y="695" width="73" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OQS-WZ-3nS">
-                                <rect key="frame" x="480" y="695" width="97" height="30"/>
+                                <rect key="frame" x="494" y="695" width="63" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3Q-8b-hGy">
-                                <rect key="frame" x="311" y="788" width="215" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3Q-8b-hGy">
+                                <rect key="frame" x="311" y="796" width="215" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Lets Navigate!"/>
                                 <connections>
@@ -74,20 +67,28 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="WAU-Hv-anV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go Go ASEC" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGn-3s-zKZ">
+                                <rect key="frame" x="160" y="150" width="559" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="65"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gKO-fV-mxn" firstAttribute="trailing" secondItem="FGn-3s-zKZ" secondAttribute="trailing" constant="357" id="Maj-a8-UX5"/>
+                            <constraint firstItem="gKO-fV-mxn" firstAttribute="trailing" secondItem="g3Q-8b-hGy" secondAttribute="trailing" constant="308" id="6HE-xN-YuH"/>
+                            <constraint firstItem="1yw-cW-tlc" firstAttribute="top" secondItem="g3Q-8b-hGy" secondAttribute="bottom" constant="75" id="FVZ-rn-bre"/>
+                            <constraint firstItem="g3Q-8b-hGy" firstAttribute="leading" secondItem="gKO-fV-mxn" secondAttribute="leading" constant="311" id="GfX-4E-oQJ"/>
                             <constraint firstItem="cIa-HE-hjL" firstAttribute="leading" secondItem="gKO-fV-mxn" secondAttribute="leading" id="NPc-Q4-FW7"/>
                             <constraint firstAttribute="trailing" secondItem="cIa-HE-hjL" secondAttribute="trailing" constant="-11" id="PEd-9z-iB8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cIa-HE-hjL" secondAttribute="trailing" constant="-31" id="RnD-1M-ZEx"/>
                             <constraint firstItem="cIa-HE-hjL" firstAttribute="leading" secondItem="qw6-tj-c7E" secondAttribute="leading" id="VDQ-5V-mkJ"/>
-                            <constraint firstItem="FGn-3s-zKZ" firstAttribute="top" secondItem="gKO-fV-mxn" secondAttribute="top" constant="130" id="Wh4-2u-mOY"/>
-                            <constraint firstItem="FGn-3s-zKZ" firstAttribute="leading" secondItem="gKO-fV-mxn" secondAttribute="leading" constant="160" id="XKp-Bm-Wku"/>
-                            <constraint firstItem="gKO-fV-mxn" firstAttribute="trailing" secondItem="HtZ-zM-F83" secondAttribute="trailing" constant="422" id="b6m-vq-W3q"/>
-                            <constraint firstItem="HtZ-zM-F83" firstAttribute="leading" secondItem="gKO-fV-mxn" secondAttribute="leading" constant="99" id="ha3-lz-KlU"/>
+                            <constraint firstItem="gKO-fV-mxn" firstAttribute="bottom" secondItem="1yw-cW-tlc" secondAttribute="bottom" constant="145" id="dwz-tc-6Yy"/>
+                            <constraint firstItem="gKO-fV-mxn" firstAttribute="trailing" secondItem="1yw-cW-tlc" secondAttribute="trailing" constant="372" id="f1w-pg-LRx"/>
                             <constraint firstItem="cIa-HE-hjL" firstAttribute="top" secondItem="qw6-tj-c7E" secondAttribute="top" constant="-303" id="lNY-so-Xv8"/>
-                            <constraint firstItem="HtZ-zM-F83" firstAttribute="top" secondItem="gKO-fV-mxn" secondAttribute="top" constant="14" id="yAO-5z-fdY"/>
+                            <constraint firstItem="1yw-cW-tlc" firstAttribute="top" secondItem="g3Q-8b-hGy" secondAttribute="bottom" constant="75" id="ona-C7-tWo"/>
+                            <constraint firstItem="1yw-cW-tlc" firstAttribute="leading" secondItem="gKO-fV-mxn" secondAttribute="leading" constant="372" id="wvt-xN-lOf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKO-fV-mxn"/>
                     </view>
